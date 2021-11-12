@@ -90,7 +90,7 @@ favoritesWidget.addUserCallback = data => {
             moneyManager.updateUsersList(response.data);
             favoritesWidget.setMessage(true, "Пользователь успешно добавлен в список избранных");
         } else {
-            favoritesWidget.setMessage(true, 'Ошибка дабавления пользователя в список избранных: ' + response.error);
+            favoritesWidget.setMessage(false, 'Ошибка дабавления пользователя в список избранных: ' + response.error);
         }
     })
 }
@@ -104,7 +104,7 @@ favoritesWidget.removeUserCallback = data => {
             moneyManager.updateUsersList(response.data);
             favoritesWidget.setMessage(true, "Пользователь успешно удалён из списока избранных");
         } else {
-            favoritesWidget.setMessage(true, 'Ошибка удаления пользователя из скписка избранных: ' + response.error);
+            favoritesWidget.setMessage(false, 'Ошибка удаления пользователя из скписка избранных: ' + response.error);
         }
     })
 }
